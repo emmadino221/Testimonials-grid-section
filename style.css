@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    font-family: "Inter", serif;
+}
+
+:root{
+    /* Primary color */
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
+    /* Natural color */
+    --white: hsl(0, 0%, 100%);
+    --gray-100: hsl(214, 17%, 92%);
+    --gray-200: hsl(0, 0%, 81%);
+    --gray-400: hsl(224, 10%, 45%);
+    --gray-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    /* Font weight */
+    --font-weight-500: 500px;
+    --font-weight-600: 600px;
+}
+
+
+.grid-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px var(--gray-500);
+}
+
+.card-hero{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card-hero img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.card-hero h2{
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.card h3{
+    color: var(--white);
+    font-weight: var(--font-weight-600);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.card-header p{
+    font-size: 0.7rem;
+}
+
+.card p{
+    color: var(--gray-200);
+    line-height: 1.3;
+    font-size: 0.9rem;
+}
+
+.card-one{
+    background-color: var(--purple-500);
+}
+.card-two{
+    background-color: var(--gray-500);
+    order: 3;
+}
+.card-three{
+    background-color: var(--white);
+    order: 5;
+}
+.card-four{
+    order: 4;
+    background-color: var(--white);
+}
+
+.card-four h3,
+ .card-four p,
+  .card-four .card-header *,
+   .card-three h3,
+    .card-three p , .card-three .card-header *{
+    color: var(--black);
+}
+.card-five{
+    background-color: var(--dark-blue);
+    order: 4;
+  
+}
+
+@media (min-width: 375px){
+    .grid-container{
+        display: grid;
+       grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .card-one{
+        grid-column: 1 / span 2;
+    }
+
+    .card-three{
+        grid-column: 4 / -1;
+        grid-row: 1 / 3;
+    }
+
+    .card-four{
+        grid-column: 1;
+    }
+
+    .card-five{
+        grid-column: 2/ span 2;
+    }
+}
