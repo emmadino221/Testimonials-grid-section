@@ -38,7 +38,7 @@ body{
 .card{
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 8px 8px 15px var(--gray-500);
+    box-shadow: 20px 20px 45px var(--gray-500);
 }
 
 .card-hero{
@@ -76,6 +76,9 @@ body{
 }
 
 .card-one{
+    background: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
     background-color: var(--purple-500);
 }
 .card-two{
@@ -105,10 +108,17 @@ body{
 }
 
 @media (min-width: 450px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     .grid-container{
         display: grid;
        grid-template-columns: repeat(4, 1fr);
-
+        width: 80%;
+        margin: 200px auto;
     }
 
     .card-one{
